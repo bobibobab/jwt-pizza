@@ -98,6 +98,28 @@ test('purchase with login', async ({ page }) => {
 
   // Check balance
   await expect(page.getByText('0.008')).toBeVisible();
-});
+
+  // // Order more 
+  // await page.getByRole('button', { name: 'Order more' }).click();
+  // await page.route('*/**/api/franchise', async (route) => {
+  //   const franchiseRes = [
+  //     {
+  //       id: 2,
+  //       name: 'LotaPizza',
+  //       stores: [
+  //         { id: 4, name: 'Lehi' },
+  //         { id: 5, name: 'Springville' },
+  //         { id: 6, name: 'American Fork' },
+  //       ],
+  //     },
+  //     { id: 3, name: 'PizzaCorp', stores: [{ id: 7, name: 'Spanish Fork' }] },
+  //     { id: 4, name: 'topSpot', stores: [] },
+  //   ];
+  //   expect(route.request().method()).toBe('GET');
+  //   await route.fulfill({ json: franchiseRes });
+
+  });
+
+//});
 
 
