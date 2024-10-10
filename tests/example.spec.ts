@@ -58,7 +58,7 @@ test('purchase with login', async ({ page }) => {
           { menuId: 1, description: 'Veggie', price: 0.0038 },
           { menuId: 2, description: 'Pepperoni', price: 0.0042 },
         ],
-        storeId: '4',
+        storeId: '1',
         franchiseId: 2,
         id: 23,
       },
@@ -111,7 +111,18 @@ test('purchase with login', async ({ page }) => {
     });
 
   });
-  await page.getByRole('link', { name: 'Logout' }).click();
+
+
+  await page.route('*/**/api/order', async (route) => {
+    const orderHisRes = { dinerId: 3, orders: [{ id: 1, franchiseId: 1, storeId: 1, date: '2024-06-05T05:14:40.000Z', items: [{ id: 1, menuId: 1, description: 'Veggie', price: 0.05 }] }], page: 1 };
+    expect(route.request().method()).toBe('GET');
+    await route.fulfill({ json: orderHisRes });
+  });
+
+  await page.getByRole('link', { name: 'KC' }).click();
+
+
+  //await page.getByRole('link', { name: 'Logout' }).click();
 
 });
 

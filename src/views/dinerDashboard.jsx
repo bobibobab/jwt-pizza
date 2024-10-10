@@ -12,6 +12,7 @@ export default function DinerDashboard({ user }) {
     (async () => {
       if (user) {
         const r = await pizzaService.getOrders(user);
+        console.log(r);
         setOrders(r.orders);
       }
     })();
