@@ -187,6 +187,7 @@ test('admin login', async ({ page }) => {
     });
     await page.getByRole('button', { name: 'Close' }).click();
     await page.getByRole('button', { name: 'Close' }).click();
+    await page.getByRole('link', { name: 'J' }).click();
 
     
     
