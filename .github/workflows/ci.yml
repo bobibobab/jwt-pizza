@@ -60,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://pizza.byucsstudent.click
+      url: https://pizza.byucs329pizza.click
     # needs: build
     # permissions:
     #   id-token: write
