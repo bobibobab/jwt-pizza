@@ -1,4 +1,4 @@
-# Curiosity Report: How docker containers work
+# Curiosity Report: How Google Devop work
 
 Google's approach to DevOps and site reliability engineering (SRE) is also an industry benchmark, particularly for its focus on automation, scalability, and reliability. Google coined the term Site Reliability Engineering (SRE) and established many of the principles that are now foundational in modern DevOps practices. Here's an overview of Google's DevOps practices
 
